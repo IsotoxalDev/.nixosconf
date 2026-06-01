@@ -26,7 +26,8 @@ local menu        = "wofi --show drun"
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("waybar")
-    hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("awww-daemon")
+    hl.exec_cmd(os.getenv("HOME") .. "/.config/scripts/wallpaper-rotate.sh")
     hl.exec_cmd("dunst")
     hl.exec_cmd("swayidle -w timeout 180 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 600 'systemctl suspend' before-sleep 'swaylock -f -c 000000'")
 end)
@@ -228,6 +229,12 @@ hl.window_rule({
     match = { title = "^(Picture-in-Picture)$" },
     float = true,
     pin   = true,
+})
+
+hl.window_rule({
+    name  = "kitty-opacity",
+    match = { class = "^(kitty)$" },
+    opacity = 0.92,
 })
 
 hl.window_rule({

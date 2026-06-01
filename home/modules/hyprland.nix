@@ -30,8 +30,9 @@
     wofi
     dunst
     swaylock
+    waybar
     swayidle
-    hyprpaper
+    awww
     brightnessctl
     playerctl
     pavucontrol
