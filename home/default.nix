@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 {
-
   imports = [
     ./modules/zsh.nix
+    ./modules/hyprland.nix
   ];
   
   home.username = "abhi";
@@ -16,5 +16,8 @@
     firefox
     helix
     zathura
+    wofi
+    waybar
+    hyprpaper
   ];
 }

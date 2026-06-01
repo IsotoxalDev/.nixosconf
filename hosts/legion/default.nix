@@ -48,9 +48,6 @@
     pciutils
     usbutils
     kitty
-    waybar
-    wofi
-    hyprpaper
   ];
 
   # Nix settings
