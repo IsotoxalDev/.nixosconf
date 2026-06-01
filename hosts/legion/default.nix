@@ -6,6 +6,8 @@
     ../../modules/nvidia.nix
     ../../modules/hyprland.nix
     ../../modules/audio.nix
+    ../../modules/battery.nix
+    ../../modules/legion.nix
   ];
 
   # Bootloader
