@@ -53,8 +53,8 @@ hl.config({
         gaps_out = 8,
         border_size = 2,
         col = {
-            active_border   = { colors = {"rgba(C5D86Dff)", "rgba(9db85aff)"}, angle = 45 },
-            inactive_border = "rgba(272b3cff)",
+            active_border   = { colors = {c.accent, c.accentDim}, angle = 45 },
+            inactive_border = c.border,
         },
         resize_on_border = true,
         layout = "dwindle",
@@ -68,7 +68,7 @@ hl.config({
             enabled      = true,
             range        = 8,
             render_power = 3,
-            color        = 0xee0f111a,
+            color        = c.shadow,
         },
         blur = {
             enabled  = true,

@@ -1,9 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
+let
+  colors = import ./colorscheme.nix;
+in
 {
   imports = [
-    ./modules/zsh.nix
-    ./modules/hyprland.nix
+    (import ./modules/zsh.nix { inherit config pkgs lib colors; })
+    (import ./modules/hyprland.nix { inherit config pkgs lib colors; })
   ];
   
   home.username = "abhi";
