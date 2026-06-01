@@ -22,5 +22,6 @@ in
     wofi
     waybar
     hyprpaper
+    libnotify
   ];
 }

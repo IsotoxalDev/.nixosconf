@@ -165,6 +165,12 @@ hl.bind(mod .. " + SHIFT + l", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mod .. " + SHIFT + k", hl.dsp.window.move({ direction = "up"    }))
 hl.bind(mod .. " + SHIFT + j", hl.dsp.window.move({ direction = "down"  }))
 
+-- Power Profiles
+-- Power profiles
+hl.bind(mod .. " + F1", hl.dsp.exec_cmd("powerprofilesctl set power-saver && notify-send 'Power Mode' 'Power Saver 🔋'"))
+hl.bind(mod .. " + F2", hl.dsp.exec_cmd("powerprofilesctl set balanced && notify-send 'Power Mode' 'Balanced ⚖'"))
+hl.bind(mod .. " + F3", hl.dsp.exec_cmd("powerprofilesctl set performance && notify-send 'Power Mode' 'Performance 🔥'"))
+
 -- Workspaces
 for i = 1, 9 do
     hl.bind(mod .. " + " .. i,             hl.dsp.focus({ workspace = i }))
