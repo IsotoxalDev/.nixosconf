@@ -48,12 +48,34 @@
     "nvidia-drm.fhdev=1"
   ];
 
+  # Hyprland + NVIDIA
+  hardware.graphics.enable = true;
+
+  # Environment variables for NVIDIA
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "nvidia";
     _GLX_VENDOR_LIBRARY_NAME = "nvidia";
     NVD_BACKEND = "direct";
   };
 
+  # Hyprland
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  # Login Manager
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        user = "greeter";
+      };
+    };
+  };
+
+  # Allow Unfree
   nixpkgs.config.allowUnfree = true;
   
   # User
@@ -74,6 +96,11 @@
     curl
     pciutils
     usbutils
+    kitty
+    waybar
+    wofi
+    hyprpaper
+    firefox
   ];
 
   # Nix settings
