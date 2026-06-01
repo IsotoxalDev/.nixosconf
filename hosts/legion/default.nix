@@ -51,7 +51,6 @@
     waybar
     wofi
     hyprpaper
-    firefox
   ];
 
   # Nix settings
