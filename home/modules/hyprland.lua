@@ -16,7 +16,7 @@ hl.monitor({
 ---- PROGRAMS ----
 --------------------
 
-local terminal    = "kitty"
+local terminal    = "kitty --single-instance"
 local fileManager = "kitty -e yazi"
 local menu        = "wofi --show drun"
 

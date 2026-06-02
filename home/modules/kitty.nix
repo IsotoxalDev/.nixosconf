@@ -47,7 +47,6 @@
       # Appearance
       window_padding_width    = 4;
       background_opacity      = "0.70";
-      dynamic_background_color = "yes";
       cursor_shape            = "beam";
       cursor_blink_interval   = "0";
 
@@ -55,6 +54,10 @@
       repaint_delay  = 8;
       input_delay    = 2;
       sync_to_monitor = "yes";
+
+      # Single instance
+      single_instance = "yes";
+      listen_on = "unix:/tmp/kitty";
 
       # Misc
       enable_audio_bell = "no";

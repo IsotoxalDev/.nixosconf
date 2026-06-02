@@ -28,6 +28,16 @@
   # Locale
   i18n.defaultLocale = "en_US.UTF-8";
 
+  # xdg-portal
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
+    ];
+    config.common.default = "*";
+  };
+
   # Allow Unfree
   nixpkgs.config.allowUnfree = true;
   

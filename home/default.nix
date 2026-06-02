@@ -8,6 +8,7 @@ in
     (import ./modules/zsh.nix { inherit config pkgs lib colors; })
     (import ./modules/hyprland.nix { inherit config pkgs lib colors; })
     (import ./modules/kitty.nix { inherit config pkgs lib colors; })
+    (import ./modules/waybar.nix { inherit config pkgs lib colors; })
   ];
   
   home.username = "abhi";
@@ -16,6 +17,8 @@ in
 
   programs.home-manager.enable = true;
 
+
+  # Wallpaper Script
   home.file.".config/scripts/wallpaper-rotate.sh" = {
     text = ''
       #!/usr/bin/env bash
