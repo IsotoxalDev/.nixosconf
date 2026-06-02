@@ -31,11 +31,10 @@ in
           "clock#time"
           "clock#dateicon"
           "clock#date"
-          "hyprland/workspaces"
         ];
 
         modules-center = [
-          "hyprland/window"
+          "hyprland/workspaces"
         ];
 
         modules-right = [
@@ -99,16 +98,7 @@ in
             "7" = [];
             "8" = [];
             "9" = [];
-          };
-        };
-
-        "hyprland/window" = {
-          max-length = 40;
-          separate-outputs = true;
-          format = "{}";
-          rewrite = {
-            "(.*) — (.*)" = "$1";
-            "(.*) - (.*)" = "$1";
+            "0" = [];
           };
         };
 
@@ -214,7 +204,7 @@ in
         background: transparent;
       }
 
-      /* LEFT PILL — clock + workspaces */
+      /* LEFT PILL — clock & date */
       #clock.icon {
         background: ${bg};
         color: ${accent};
@@ -242,11 +232,12 @@ in
         padding: 0 14px 0 4px;
       }
       
+      /* CENTER PILL — workspace */
+
       #workspaces {
         background: ${bg};
         border-radius: 8px;
         padding: 0 10px;
-        margin-left: 8px;
       }
 
       #workspaces button {
@@ -269,15 +260,6 @@ in
 
       #workspaces button.occupied {
         color: ${fg};
-      }
-
-      /* CENTER PILL — window title */
-      #window {
-        background: ${bg};
-        color: ${fg};
-        border-radius: 8px;
-        padding: 0 20px;
-        opacity: 0.75;
       }
 
       /* RIGHT PILL — system */
