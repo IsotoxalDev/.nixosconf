@@ -37,6 +37,9 @@
     playerctl
     pavucontrol
     bibata-cursors
-    hyprshot
+    grim
+    slurp
+    wl-clipboard
+    satty
   ];
 }

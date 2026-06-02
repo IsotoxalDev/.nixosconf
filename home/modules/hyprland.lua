@@ -205,8 +205,11 @@ hl.bind(mod .. " + L",         hl.dsp.exec_cmd("swaylock -f -c 000000"))
 hl.bind(mod .. " + SHIFT + R", hl.dsp.exec_cmd("sudo nixos-rebuild switch --flake ~/.nixosconf#legion"))
 
 -- Screenshot
-hl.bind(mod .. " + Print",         hl.dsp.exec_cmd("hyprshot -m output"))
-hl.bind(mod .. " + SHIFT + Print", hl.dsp.exec_cmd("hyprshot -m region"))
+-- -- Screenshots
+local satty = "satty -f - --initial-tool arrow --copy-command wl-copy --actions-on-escape save-to-clipboard,exit --early-exit"
+
+hl.bind(mod .. " + Print",         hl.dsp.exec_cmd("grim -t ppm -g \"$(slurp -d)\" - | " .. satty))
+hl.bind(mod .. " + SHIFT + Print", hl.dsp.exec_cmd("grim -t ppm - | " .. satty))
 
 --------------------
 ---- WINDOW RULES ----
@@ -229,6 +232,12 @@ hl.window_rule({
     match = { title = "^(Picture-in-Picture)$" },
     float = true,
     pin   = true,
+})
+
+hl.window_rule({
+    name  = "satty-float",
+    match = { class = "^(com.gabm.satty)$" },
+    float = true,
 })
 
 hl.window_rule({

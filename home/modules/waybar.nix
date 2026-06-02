@@ -179,8 +179,7 @@ in
 
         "custom/screenshot" = {
           format = "⛶";
-          on-click = "hyprshot -m region";
-          on-click-right = "hyprshot -m output";
+          on-click = "grim -t ppm -g \"$(slurp -d)\" - | satty -f - --initial-tool arrow --copy-command wl-copy --actions-on-escape save-to-clipboard,exit --early-exit";
           tooltip = false;
         };
 
