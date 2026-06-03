@@ -82,23 +82,13 @@ in
         "hyprland/workspaces" = {
           format = "{icon}";
           format-icons = {
-            active = "●";
-            default = "○";
-            urgent = "◉";
+            active    = "●";
+            persistent   = "◉";  # has windows — filled ring
+            empty     = "○";  # no windows — empty ring
+            urgent    = "⊙";
           };
-          on-scroll-up = "hyprctl dispatch workspace e+1";
-          on-scroll-down = "hyprctl dispatch workspace e-1";
           persistent-workspaces = {
-            "1" = [];
-            "2" = [];
-            "3" = [];
-            "4" = [];
-            "5" = [];
-            "6" = [];
-            "7" = [];
-            "8" = [];
-            "9" = [];
-            "0" = [];
+            "*" = 10;
           };
         };
 
@@ -258,8 +248,8 @@ in
         color: ${red};
       }
 
-      #workspaces button.occupied {
-        color: ${fg};
+      #workspaces button.empty {
+        color: ${dim};
       }
 
       /* RIGHT PILL — system */
