@@ -28,7 +28,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("waybar")
     hl.exec_cmd("awww-daemon")
     hl.exec_cmd(os.getenv("HOME") .. "/.config/scripts/wallpaper-rotate.sh")
-    hl.exec_cmd("dunst")
+    hl.exec_cmd(os.getenv("HOME") .. "/.config/scripts/battery-monitor.sh")
     hl.exec_cmd("swayidle -w timeout 180 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 600 'systemctl suspend' before-sleep 'swaylock -f -c 000000'")
 end)
 
@@ -121,6 +121,7 @@ hl.config({
             natural_scroll       = true,
             disable_while_typing = true,
             tap_to_click         = true,
+            scroll_factor        = 0.3,
         },
     },
 })
@@ -148,7 +149,7 @@ hl.bind(mod .. " + Q",         hl.dsp.window.close())
 hl.bind(mod .. " + F",         hl.dsp.window.fullscreen())
 hl.bind(mod .. " + SHIFT + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mod .. " + P",         hl.dsp.window.pseudo())
-hl.bind(mod .. " + J",         hl.dsp.layout("togglesplit"))
+hl.bind(mod .. " + T",         hl.dsp.layout("togglesplit"))
 
 -- Focus (vim keys)
 hl.bind(mod .. " + h",     hl.dsp.focus({ direction = "left"  }))
@@ -166,7 +167,17 @@ hl.bind(mod .. " + SHIFT + l", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mod .. " + SHIFT + k", hl.dsp.window.move({ direction = "up"    }))
 hl.bind(mod .. " + SHIFT + j", hl.dsp.window.move({ direction = "down"  }))
 
--- Power Profiles
+-- Resize windows (Super+Alt + vim keys)
+hl.bind(mod .. " + ALT + h", function() hl.dispatch("resizeactive", "-50 0") end)
+hl.bind(mod .. " + ALT + l", function() hl.dispatch("resizeactive", "50 0") end)
+hl.bind(mod .. " + ALT + k", function() hl.dispatch("resizeactive", "0 -50") end)
+hl.bind(mod .. " + ALT + j", function() hl.dispatch("resizeactive", "0 50") end)
+
+hl.bind(mod .. " + ALT + left",  function() hl.dispatch("resizeactive", "-50 0") end)
+hl.bind(mod .. " + ALT + right", function() hl.dispatch("resizeactive", "50 0") end)
+hl.bind(mod .. " + ALT + up",    function() hl.dispatch("resizeactive", "0 -50") end)
+hl.bind(mod .. " + ALT + down",  function() hl.dispatch("resizeactive", "0 50") end)
+
 -- Power profiles
 hl.bind(mod .. " + F1", hl.dsp.exec_cmd("powerprofilesctl set power-saver && notify-send 'Power Mode' 'Power Saver 🔋'"))
 hl.bind(mod .. " + F2", hl.dsp.exec_cmd("powerprofilesctl set balanced && notify-send 'Power Mode' 'Balanced ⚖'"))
@@ -201,7 +212,7 @@ hl.bind("XF86AudioPrev",         hl.dsp.exec_cmd("playerctl previous"),         
 
 -- System
 hl.bind(mod .. " + SHIFT + Q", hl.dsp.exit())
-hl.bind(mod .. " + L",         hl.dsp.exec_cmd("swaylock -f -c 000000"))
+hl.bind(mod .. " + Escape",         hl.dsp.exec_cmd("swaylock -f -c 000000"))
 hl.bind(mod .. " + SHIFT + R", hl.dsp.exec_cmd("sudo nixos-rebuild switch --flake ~/.nixosconf#legion"))
 
 -- Screenshot
