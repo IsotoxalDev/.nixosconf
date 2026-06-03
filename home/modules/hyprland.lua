@@ -72,10 +72,12 @@ hl.config({
             color        = c.shadow,
         },
         blur = {
-            enabled  = true,
-            size     = 6,
-            passes   = 3,
-            vibrancy = 0.1696,
+            enabled            = true,
+            size               = 6,
+            passes             = 3,
+            vibrancy           = 0.1696,
+            popups             = true,
+            popups_ignorealpha = 0.2
         },
     },
 
@@ -223,6 +225,22 @@ local satty = "satty -f - --initial-tool arrow --copy-command wl-copy --actions-
 
 hl.bind(mod .. " + Print",         hl.dsp.exec_cmd("grim -t ppm -g \"$(slurp -d)\" - | " .. satty))
 hl.bind(mod .. " + SHIFT + Print", hl.dsp.exec_cmd("grim -t ppm - | " .. satty))
+
+--------------------
+---- LAYER RULES ----
+--------------------
+
+hl.layer_rule({
+    name  = "wofi-blur",
+    match = { namespace = "^(wofi)$" },
+    blur  = true,
+})
+
+hl.layer_rule({
+    name  = "notifications-blur",
+    match = { namespace = "^(notifications)$" },
+    blur  = true,
+})
 
 --------------------
 ---- WINDOW RULES ----

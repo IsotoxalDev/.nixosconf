@@ -22,7 +22,7 @@
         progress_bar_max_width = 300;
 
         indicate_hidden = true;
-        transparency = 10;
+        transparency = 15;
         separator_height = 2;
         padding = 12;
         horizontal_padding = 14;

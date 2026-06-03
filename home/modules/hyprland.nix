@@ -27,7 +27,6 @@
   };
 
   home.packages = with pkgs; [
-    wofi
     dunst
     swaylock
     waybar

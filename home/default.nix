@@ -10,6 +10,8 @@ in
     (import ./modules/kitty.nix { inherit config pkgs lib colors; })
     (import ./modules/waybar.nix { inherit config pkgs lib colors; })
     (import ./modules/dunst.nix { inherit config pkgs lib colors; })
+    (import ./modules/helix.nix { inherit config pkgs lib colors; })
+    (import ./modules/wofi.nix { inherit config pkgs lib colors; })
   ];
   
   home.username = "abhi";
@@ -71,7 +73,6 @@ in
 
   home.packages = with pkgs; [
     firefox
-    helix
     zathura
     libnotify
     papirus-icon-theme
