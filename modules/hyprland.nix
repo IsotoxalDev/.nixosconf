@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
   
   programs.hyprland = {
     enable = true;

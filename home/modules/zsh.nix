@@ -14,9 +14,8 @@
       lt = "eza --tree --icons";
       cat = "bat";
       cd = "z";
-      y = "yazi";
       rebuild = "sudo nixos-rebuild switch --flake ~/.nixosconf#legion";
-      update = "nix flake update ~/.nixosconf && rebuild";
+      update = "nix flake update --flake ~/.nixosconf/flake.nix && rebuild";
     };
 
     history.size = 10000;

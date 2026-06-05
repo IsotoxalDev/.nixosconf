@@ -56,6 +56,37 @@
   # Enable zsh
   programs.zsh.enable = true;
 
+  # Steam + gaming
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    gamescopeSession.enable = true;
+  };
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  programs.gamemode.enable = true;
+
+  # Firefox
+  programs.firefox = {
+    enable = true;
+    preferences = {
+      "media.ffmpeg.vaapi.enabled" = true;
+      "media.hardware-video-decoding.force-enabled" = true;
+      "layout.css.devPixelsPerPx" = "1.25";
+    };
+  };
+
+  # Ollama
+  services.ollama = {
+    enable = true;
+    package = pkgs.ollama-cuda;
+  };
+
   # Basic packages
   environment.systemPackages = with pkgs; [
     git
@@ -67,6 +98,12 @@
     kitty
     sbctl
   ];
+
+  environment.sessionVariables = {
+    MOZ_ENABLE_WAYLAND = "1";
+    MOZ_USE_XINPUT2 = "1";
+    STEAM_FORCE_DESKTOPUI_SCALING = "1.6";
+  };
 
   # Nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

@@ -12,6 +12,7 @@ in
     (import ./modules/dunst.nix { inherit config pkgs lib colors; })
     (import ./modules/helix.nix { inherit config pkgs lib colors; })
     (import ./modules/wofi.nix { inherit config pkgs lib colors; })
+    (import ./modules/gaming.nix { inherit config pkgs lib colors; })
   ];
   
   home.username = "abhi";
@@ -72,9 +73,25 @@ in
   };
 
   home.packages = with pkgs; [
-    firefox
     zathura
     libnotify
     papirus-icon-theme
+
+    #Media Codecs
+    ffmpeg
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-ugly
+    gst_all_1.gst-libav
+
+    #Game
+    protonup-qt
+    mangohud
+    heroic
+
+    #work
+    hubstaff
   ];
 }

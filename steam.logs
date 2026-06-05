@@ -1,0 +1,685 @@
+execve("/run/current-system/sw/bin/steam", ["steam", "-dev", "-console"], 0x7ffce6dbe040 /* 73 vars */) = 0
+brk(NULL)                               = 0x59be7e470000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c1659c68000
+access("/etc/ld-nix.so.preload", R_OK)  = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/glibc-hwcaps/x86-64-v3/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/glibc-hwcaps/x86-64-v3/", 0x7ffdc21041d0, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/glibc-hwcaps/x86-64-v2/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/glibc-hwcaps/x86-64-v2/", 0x7ffdc21041d0, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0555, st_size=15688, ...}) = 0
+mmap(NULL, 16400, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7c1659c63000
+mmap(0x7c1659c64000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7c1659c64000
+mmap(0x7c1659c65000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7c1659c65000
+mmap(0x7c1659c66000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7c1659c66000
+close(3)                                = 0
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@\264\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+fstat(3, {st_mode=S_IFREG|0555, st_size=2413096, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+mmap(NULL, 2141776, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7c1659a00000
+mmap(0x7c1659a28000, 1576960, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7c1659a28000
+mmap(0x7c1659ba9000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a9000) = 0x7c1659ba9000
+mmap(0x7c1659bf8000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f7000) = 0x7c1659bf8000
+mmap(0x7c1659bfe000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7c1659bfe000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c1659c60000
+arch_prctl(ARCH_SET_FS, 0x7c1659c60780) = 0
+set_tid_address(0x7c1659c60a50)         = 53513
+set_robust_list(0x7c1659c60a60, 24)     = 0
+rseq({cpu_id_start=0, cpu_id=RSEQ_CPU_ID_UNINITIALIZED, rseq_cs=NULL, flags=0, node_id=0, mm_cid=0, slice_ctrl={request=0, granted=0, __reserved=0}, __reserved=0}, 33, 0, 0x53053053) = 0
+mprotect(0x7c1659bf8000, 16384, PROT_READ) = 0
+mprotect(0x7c1659c66000, 4096, PROT_READ) = 0
+mprotect(0x59be3ed9f000, 8192, PROT_READ) = 0
+mprotect(0x7c1659ca9000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+getrandom("\x08\x73\xe8\x03\xa0\x31\x0a\x39", 8, GRND_NONBLOCK) = 8
+openat(AT_FDCWD, "/dev/tty", O_RDWR|O_NONBLOCK) = 3
+close(3)                                = 0
+brk(NULL)                               = 0x59be7e470000
+brk(0x59be7e491000)                     = 0x59be7e491000
+openat(AT_FDCWD, "/nix/store/pg0h4abp75vwjrv8ndiy21cxln7ijibz-glibc-locales-2.42-61/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=3068768, ...}) = 0
+mmap(NULL, 3068768, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7c1659600000
+close(3)                                = 0
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/gconv/gconv-modules", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=3916, ...}) = 0
+read(3, "# GNU libc iconv configuration.\n"..., 4096) = 3916
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/gconv/gconv-modules.d", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0555, st_size=48, ...}) = 0
+getdents64(3, 0x59be7e4745e0 /* 3 entries */, 32768) = 96
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/gconv/gconv-modules.d/gconv-modules-extra.conf", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0444, st_size=53974, ...}) = 0
+read(4, "# GNU libc iconv configuration.\n"..., 4096) = 4096
+read(4, "B1002//\tJUS_I.B1.002//\nmodule\tJU"..., 4096) = 4096
+read(4, "59-5//\nalias\tISO_8859-5//\t\tISO-8"..., 4096) = 4096
+read(4, "59-16//\t\tINTERNAL\t\tISO8859-16\t1\n"..., 4096) = 4096
+read(4, "-SE-A\t1\nmodule\tINTERNAL\t\tEBCDIC-"..., 4096) = 4096
+read(4, "97\t\t1\n\n#\tfrom\t\t\tto\t\t\tmodule\t\tcos"..., 4096) = 4096
+read(4, "1\n\n#\tfrom\t\t\tto\t\t\tmodule\t\tcost\nal"..., 4096) = 4096
+read(4, "6//\t\tIBM1046//\nalias\tCP1046//\t\tI"..., 4096) = 4096
+brk(0x59be7e4b2000)                     = 0x59be7e4b2000
+read(4, "\tto\t\t\tmodule\t\tcost\nalias\tRUSCII/"..., 4096) = 4096
+read(4, "03//\nmodule\tCSN_369103//\t\tINTERN"..., 4096) = 4096
+read(4, "\tmodule\t\tcost\nalias\tISO-IR-8-1//"..., 4096) = 4096
+read(4, "IBM1156\t\t1\n\n#\tfrom\t\t\tto\t\t\tmodule"..., 4096) = 4096
+read(4, "\t\tIBM1166//\nalias\tCP1166//\t\tIBM1"..., 4096) = 4096
+read(4, "alias\tROMAN9//\t\tHP-ROMAN9//\nalia"..., 4096) = 726
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+getdents64(3, 0x59be7e4745e0 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+futex(0x7c1659bfd72c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+getresuid([1000], [1000], [1000])       = 0
+getresgid([100], [100], [100])          = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+uname({sysname="Linux", nodename="legion", ...}) = 0
+newfstatat(AT_FDCWD, "/home/abhi/.nixosconf", {st_mode=S_IFDIR|0755, st_size=110, ...}, 0) = 0
+newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0755, st_size=110, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home", {st_mode=S_IFDIR|0755, st_size=8, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/abhi", {st_mode=S_IFDIR|0700, st_size=328, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/abhi/.nixosconf", {st_mode=S_IFDIR|0755, st_size=110, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/abhi", {st_mode=S_IFDIR|0700, st_size=328, ...}, 0) = 0
+getpid()                                = 53513
+getppid()                               = 53511
+getpid()                                = 53513
+getppid()                               = 53511
+getpid()                                = 53513
+getppid()                               = 53511
+getpgrp()                               = 53511
+ioctl(2, TIOCGPGRP, 0x7ffdc2104cc4)     = -1 ENOTTY (Inappropriate ioctl for device)
+rt_sigaction(SIGCHLD, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, 8) = 0
+ioctl(2, TIOCGPGRP, 0x7ffdc2104c74)     = -1 ENOTTY (Inappropriate ioctl for device)
+prlimit64(0, RLIMIT_NPROC, NULL, {rlim_cur=125877, rlim_max=125877}) = 0
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=2998, ...}) = 0
+read(3, "# Locale name alias data base.\n#"..., 4096) = 2998
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/nix/store/gik3rh1vz2jlgnifb9dh6vc6sxwwz9jj-bash-5.3p9/share/locale/en_US.UTF-8/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/gik3rh1vz2jlgnifb9dh6vc6sxwwz9jj-bash-5.3p9/share/locale/en_US.utf8/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/gik3rh1vz2jlgnifb9dh6vc6sxwwz9jj-bash-5.3p9/share/locale/en_US/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/gik3rh1vz2jlgnifb9dh6vc6sxwwz9jj-bash-5.3p9/share/locale/en.UTF-8/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/gik3rh1vz2jlgnifb9dh6vc6sxwwz9jj-bash-5.3p9/share/locale/en.utf8/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/gik3rh1vz2jlgnifb9dh6vc6sxwwz9jj-bash-5.3p9/share/locale/en/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+openat(AT_FDCWD, "/run/current-system/sw/bin/steam", O_RDONLY) = 3
+newfstatat(AT_FDCWD, "/run/current-system/sw/bin/steam", {st_mode=S_IFREG|0555, st_size=6011, ...}, 0) = 0
+ioctl(3, TCGETS2, 0x7ffdc2104e20)       = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(3, 0, SEEK_CUR)                   = 0
+read(3, "#!/nix/store/gik3rh1vz2jlgnifb9d"..., 80) = 80
+lseek(3, 0, SEEK_SET)                   = 0
+prlimit64(0, RLIMIT_NOFILE, NULL, {rlim_cur=1024, rlim_max=512*1024}) = 0
+fcntl(255, F_GETFD)                     = -1 EBADF (Bad file descriptor)
+dup2(3, 255)                            = 255
+close(3)                                = 0
+fcntl(255, F_SETFD, FD_CLOEXEC)         = 0
+fcntl(255, F_GETFL)                     = 0x8000 (flags O_RDONLY|O_LARGEFILE)
+fstat(255, {st_mode=S_IFREG|0555, st_size=6011, ...}) = 0
+lseek(255, 0, SEEK_CUR)                 = 0
+brk(0x59be7e4d4000)                     = 0x59be7e4d4000
+read(255, "#!/nix/store/gik3rh1vz2jlgnifb9d"..., 6011) = 6011
+openat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0555, st_size=88, ...}) = 0
+getdents64(3, 0x59be7e4b6050 /* 11 entries */, 32768) = 296
+getdents64(3, 0x59be7e4b6050 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/bin", {st_mode=S_IFLNK|0777, st_size=8, ...}, AT_SYMLINK_NOFOLLOW) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe2([3, 4], 0)                        = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, [INT TERM CHLD], [], 8) = 0
+lseek(255, -5400, SEEK_CUR)             = 611
+rt_sigprocmask(SIG_BLOCK, ~[], [INT TERM CHLD], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7c1659c60a50) = 53514
+rt_sigprocmask(SIG_SETMASK, [INT TERM CHLD], NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, 8) = 0
+close(4)                                = 0
+rt_sigprocmask(SIG_BLOCK, [INT], [], 8) = 0
+read(3, "/usr/bin\n", 4096)             = 9
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=53514, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 53514
+wait4(-1, 0x7ffdc2101f50, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[INT]})              = 9
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/lib", {st_mode=S_IFLNK|0777, st_size=8, ...}, AT_SYMLINK_NOFOLLOW) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe2([3, 4], 0)                        = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, [INT TERM CHLD], [], 8) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [INT TERM CHLD], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7c1659c60a50) = 53515
+rt_sigprocmask(SIG_SETMASK, [INT TERM CHLD], NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, 8) = 0
+close(4)                                = 0
+rt_sigprocmask(SIG_BLOCK, [INT], [], 8) = 0
+read(3, "/usr/lib\n", 4096)             = 9
+read(3, "", 4096)                       = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=53515, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 53515
+wait4(-1, 0x7ffdc2101f50, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[INT]})              = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/lib32", {st_mode=S_IFLNK|0777, st_size=10, ...}, AT_SYMLINK_NOFOLLOW) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe2([3, 4], 0)                        = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, [INT TERM CHLD], [], 8) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [INT TERM CHLD], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7c1659c60a50) = 53516
+rt_sigprocmask(SIG_SETMASK, [INT TERM CHLD], NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, 8) = 0
+close(4)                                = 0
+rt_sigprocmask(SIG_BLOCK, [INT], [], 8) = 0
+read(3, "/usr/lib32\n", 4096)           = 11
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=53516, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 53516
+wait4(-1, 0x7ffdc2101f50, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[INT]})              = 11
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/lib64", {st_mode=S_IFLNK|0777, st_size=10, ...}, AT_SYMLINK_NOFOLLOW) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe2([3, 4], 0)                        = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, [INT TERM CHLD], [], 8) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [INT TERM CHLD], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7c1659c60a50) = 53517
+rt_sigprocmask(SIG_SETMASK, [INT TERM CHLD], NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, 8) = 0
+close(4)                                = 0
+rt_sigprocmask(SIG_BLOCK, [INT], [], 8) = 0
+read(3, "/usr/lib64\n", 4096)           = 11
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=53517, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 53517
+wait4(-1, 0x7ffdc2103050, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[INT]})              = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/libexec", {st_mode=S_IFLNK|0777, st_size=12, ...}, AT_SYMLINK_NOFOLLOW) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe2([3, 4], 0)                        = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, [INT TERM CHLD], [], 8) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [INT TERM CHLD], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7c1659c60a50) = 53518
+rt_sigprocmask(SIG_SETMASK, [INT TERM CHLD], NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, 8) = 0
+close(4)                                = 0
+rt_sigprocmask(SIG_BLOCK, [INT], [], 8) = 0
+read(3, "/usr/libexec\n", 4096)         = 13
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=53518, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 53518
+wait4(-1, 0x7ffdc2103050, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[INT]})              = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/nix-support", {st_mode=S_IFDIR|0555, st_size=18, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/sbin", {st_mode=S_IFLNK|0777, st_size=9, ...}, AT_SYMLINK_NOFOLLOW) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe2([3, 4], 0)                        = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, [INT TERM CHLD], [], 8) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [INT TERM CHLD], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7c1659c60a50) = 53519
+rt_sigprocmask(SIG_SETMASK, [INT TERM CHLD], NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, 8) = 0
+close(4)                                = 0
+rt_sigprocmask(SIG_BLOCK, [INT], [], 8) = 0
+read(3, "/usr/sbin\n", 4096)            = 10
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=53519, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 53519
+wait4(-1, 0x7ffdc2103050, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[INT]})              = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/usr", {st_mode=S_IFDIR|0555, st_size=78, ...}, AT_SYMLINK_NOFOLLOW) = 0
+read(255, "\n# loop through the entries of /"..., 6011) = 5400
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc", {st_mode=S_IFDIR|0555, st_size=588, ...}, 0) = 0
+openat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0555, st_size=588, ...}) = 0
+getdents64(3, 0x59be7e4be0b0 /* 41 entries */, 32768) = 1264
+getdents64(3, 0x59be7e4be0b0 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/avahi", {st_mode=S_IFDIR|0555, st_size=142, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/bash_completion.d", {st_mode=S_IFDIR|0555, st_size=8, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/bluetooth", {st_mode=S_IFDIR|0555, st_size=90, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/dbus-1", {st_mode=S_IFDIR|0555, st_size=46, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/dhcpcd.conf", {st_mode=S_IFLNK|0777, st_size=73, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/environment", {st_mode=S_IFLNK|0777, st_size=75, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/ethertypes", {st_mode=S_IFLNK|0777, st_size=74, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/gtk-3.0", {st_mode=S_IFDIR|0555, st_size=36, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/libnl", {st_mode=S_IFDIR|0555, st_size=26, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/locale", {st_mode=S_IFDIR|0555, st_size=212, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/login.defs", {st_mode=S_IFLNK|0777, st_size=72, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/mailcap", {st_mode=S_IFLNK|0777, st_size=70, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/man", {st_mode=S_IFDIR|0555, st_size=8, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/mime.types", {st_mode=S_IFLNK|0777, st_size=73, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/mtab", {st_mode=S_IFLNK|0777, st_size=12, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/nftables", {st_mode=S_IFDIR|0555, st_size=6, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/nginx", {st_mode=S_IFDIR|0555, st_size=20, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/OpenCL", {st_mode=S_IFDIR|0555, st_size=14, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/pam.d", {st_mode=S_IFDIR|0555, st_size=140, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/pkcs11", {st_mode=S_IFDIR|0555, st_size=38, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/pkgconfig", {st_mode=S_IFDIR|0555, st_size=80, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/ppp", {st_mode=S_IFDIR|0555, st_size=230, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/profile", {st_mode=S_IFLNK|0777, st_size=85, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/profile.d", {st_mode=S_IFDIR|0555, st_size=184, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/resolvconf.conf", {st_mode=S_IFLNK|0777, st_size=81, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/rpc", {st_mode=S_IFLNK|0777, st_size=65, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/security", {st_mode=S_IFDIR|0555, st_size=188, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/sensors3.conf", {st_mode=S_IFLNK|0777, st_size=78, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/slsh.rc", {st_mode=S_IFLNK|0777, st_size=67, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/systemd", {st_mode=S_IFDIR|0555, st_size=20, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/tpm2-tss", {st_mode=S_IFDIR|0555, st_size=100, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/udev", {st_mode=S_IFDIR|0555, st_size=14, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/wildmidi", {st_mode=S_IFDIR|0555, st_size=24, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/X11", {st_mode=S_IFDIR|0555, st_size=6, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/xattr.conf", {st_mode=S_IFLNK|0777, st_size=69, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/xdg", {st_mode=S_IFDIR|0555, st_size=118, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/nix/store/n1iyrblafb8q9fxqfpa93rlm2vxlbcyz-steam-1.0.0.85-fhsenv-rootfs/etc/xkeyboard-config-2", {st_mode=S_IFDIR|0555, st_size=78, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/.host-etc", 0x7ffdc2104a50, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/etc/static", {st_mode=S_IFDIR|0555, st_size=1276, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/nix", {st_mode=S_IFDIR|0755, st_size=42, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/shells", {st_mode=S_IFREG|0444, st_size=311, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/bashrc", {st_mode=S_IFREG|0444, st_size=2048, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/zshenv", {st_mode=S_IFREG|0444, st_size=774, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/zshrc", {st_mode=S_IFREG|0444, st_size=2248, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/zinputrc", {st_mode=S_IFREG|0444, st_size=1629, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/zprofile", {st_mode=S_IFREG|0444, st_size=1057, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/passwd", {st_mode=S_IFREG|0644, st_size=3915, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/group", {st_mode=S_IFREG|0644, st_size=910, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/shadow", {st_mode=S_IFREG|0640, st_size=1067, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/hosts", {st_mode=S_IFREG|0444, st_size=51, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/resolv.conf", {st_mode=S_IFREG|0664, st_size=124, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/nsswitch.conf", {st_mode=S_IFREG|0444, st_size=273, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/profiles", {st_mode=S_IFDIR|0755, st_size=16, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/sudoers", {st_mode=S_IFREG|0440, st_size=383, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/sudoers.d", 0x7ffdc2104730, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/etc/localtime", {st_mode=S_IFREG|0444, st_size=285, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/zoneinfo", {st_mode=S_IFDIR|0555, st_size=834, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/machine-id", {st_mode=S_IFREG|0444, st_size=33, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/os-release", {st_mode=S_IFREG|0444, st_size=567, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/fonts", {st_mode=S_IFDIR|0555, st_size=40, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/alsa", {st_mode=S_IFDIR|0755, st_size=12, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/asound.conf", 0x7ffdc2104730, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/etc/ssl/certs", {st_mode=S_IFDIR|0755, st_size=64, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/ca-certificates", 0x7ffdc2104730, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/etc/pki", {st_mode=S_IFDIR|0755, st_size=6, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/dconf", 0x7ffdc2104730, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=122, ...}) = 0
+getdents64(3, 0x59be7e4c82a0 /* 18 entries */, 32768) = 448
+getdents64(3, 0x59be7e4c82a0 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/bin", {st_mode=S_IFDIR|0755, st_size=4, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/boot", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/dev", {st_mode=S_IFDIR|0755, st_size=4020, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc", {st_mode=S_IFDIR|0755, st_size=1298, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home", {st_mode=S_IFDIR|0755, st_size=8, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/lib64", {st_mode=S_IFDIR|0755, st_size=40, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/nix", {st_mode=S_IFDIR|0755, st_size=16, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/proc", {st_mode=S_IFDIR|0555, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/root", {st_mode=S_IFDIR|0700, st_size=62, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run", {st_mode=S_IFDIR|0755, st_size=680, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/srv", {st_mode=S_IFDIR|0755, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/sys", {st_mode=S_IFDIR|0555, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=1312, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/usr", {st_mode=S_IFDIR|0755, st_size=6, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var", {st_mode=S_IFDIR|0755, st_size=82, ...}, 0) = 0
+pipe2([3, 4], 0)                        = 0
+fcntl(4, F_GETPIPE_SZ)                  = 65536
+write(4, "unix:path=/run/user/1000/bus\n", 29) = 29
+close(4)                                = 0
+fcntl(0, F_GETFD)                       = 0
+fcntl(0, F_DUPFD, 10)                   = 10
+fcntl(0, F_GETFD)                       = 0
+fcntl(10, F_SETFD, FD_CLOEXEC)          = 0
+dup2(3, 0)                              = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_SETMASK, NULL, [], 8) = 0
+ioctl(0, TCGETS2, 0x7ffdc21048a0)       = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(0, 0, SEEK_CUR)                   = -1 ESPIPE (Illegal seek)
+read(0, "u", 1)                         = 1
+read(0, "n", 1)                         = 1
+read(0, "i", 1)                         = 1
+read(0, "x", 1)                         = 1
+read(0, ":", 1)                         = 1
+read(0, "p", 1)                         = 1
+read(0, "a", 1)                         = 1
+read(0, "t", 1)                         = 1
+read(0, "h", 1)                         = 1
+read(0, "=", 1)                         = 1
+read(0, "/", 1)                         = 1
+read(0, "r", 1)                         = 1
+read(0, "u", 1)                         = 1
+read(0, "n", 1)                         = 1
+read(0, "/", 1)                         = 1
+read(0, "u", 1)                         = 1
+read(0, "s", 1)                         = 1
+read(0, "e", 1)                         = 1
+read(0, "r", 1)                         = 1
+read(0, "/", 1)                         = 1
+read(0, "1", 1)                         = 1
+read(0, "0", 1)                         = 1
+read(0, "0", 1)                         = 1
+read(0, "0", 1)                         = 1
+read(0, "/", 1)                         = 1
+read(0, "b", 1)                         = 1
+read(0, "u", 1)                         = 1
+read(0, "s", 1)                         = 1
+read(0, "\n", 1)                        = 1
+dup2(10, 0)                             = 0
+fcntl(10, F_GETFD)                      = 0x1 (flags FD_CLOEXEC)
+close(10)                               = 0
+pipe2([3, 4], 0)                        = 0
+fcntl(4, F_GETPIPE_SZ)                  = 65536
+write(4, "path=/run/user/1000/bus\n", 24) = 24
+close(4)                                = 0
+fcntl(0, F_GETFD)                       = 0
+fcntl(0, F_DUPFD, 10)                   = 10
+fcntl(0, F_GETFD)                       = 0
+fcntl(10, F_SETFD, FD_CLOEXEC)          = 0
+dup2(3, 0)                              = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_SETMASK, NULL, [], 8) = 0
+ioctl(0, TCGETS2, 0x7ffdc21043d0)       = -1 ENOTTY (Inappropriate ioctl for device)
+lseek(0, 0, SEEK_CUR)                   = -1 ESPIPE (Illegal seek)
+read(0, "p", 1)                         = 1
+read(0, "a", 1)                         = 1
+read(0, "t", 1)                         = 1
+read(0, "h", 1)                         = 1
+read(0, "=", 1)                         = 1
+read(0, "/", 1)                         = 1
+read(0, "r", 1)                         = 1
+read(0, "u", 1)                         = 1
+read(0, "n", 1)                         = 1
+read(0, "/", 1)                         = 1
+read(0, "u", 1)                         = 1
+read(0, "s", 1)                         = 1
+read(0, "e", 1)                         = 1
+read(0, "r", 1)                         = 1
+read(0, "/", 1)                         = 1
+read(0, "1", 1)                         = 1
+read(0, "0", 1)                         = 1
+read(0, "0", 1)                         = 1
+read(0, "0", 1)                         = 1
+read(0, "/", 1)                         = 1
+read(0, "b", 1)                         = 1
+read(0, "u", 1)                         = 1
+read(0, "s", 1)                         = 1
+read(0, "\n", 1)                        = 1
+dup2(10, 0)                             = 0
+fcntl(10, F_GETFD)                      = 0x1 (flags FD_CLOEXEC)
+close(10)                               = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+pipe2([3, 4], 0)                        = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, [INT TERM CHLD], [], 8) = 0
+lseek(255, -18, SEEK_CUR)               = 5993
+rt_sigprocmask(SIG_BLOCK, ~[], [INT TERM CHLD], 8) = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7c1659c60a50) = 53520
+rt_sigprocmask(SIG_SETMASK, [INT TERM CHLD], NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, 8) = 0
+close(4)                                = 0
+rt_sigprocmask(SIG_BLOCK, [INT], [], 8) = 0
+read(3, "/home/abhi/.nixosconf\n", 4096) = 22
+read(3, "", 4096)                       = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=53520, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 53520
+wait4(-1, 0x7ffdc2102690, WNOHANG, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[INT]})              = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed02290, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+brk(0x59be7e4f5000)                     = 0x59be7e4f5000
+read(255, "exec \"${cmd[@]}\"\n\n", 6011) = 18
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7c1659a42790}, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, {sa_handler=0x59be3ed06260, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7c1659a42790}, 8) = 0
+lseek(255, -1, SEEK_CUR)                = 6010
+execve("/nix/store/zp6rsi809fx5h7dccn7aidg1mj8zgn52-bubblewrap-0.11.2/bin/bwrap", ["/nix/store/zp6rsi809fx5h7dccn7ai"..., "--dev-bind", "/dev", "/dev", "--proc", "/proc", "--chdir", "/home/abhi/.nixosconf", "--die-with-parent", "--bind", "/nix", "/nix", "--tmpfs", "/tmp", "--tmpfs", "/nix/store/57iz36553175g3178pvxj"..., "--tmpfs", "/etc", "--symlink", "/etc/ld.so.conf", "/nix/store/57iz36553175g3178pvxj"..., "--symlink", "/etc/ld.so.cache", "/nix/store/57iz36553175g3178pvxj"..., "--ro-bind", "/nix/store/57iz36553175g3178pvxj"..., "/nix/store/57iz36553175g3178pvxj"..., "--remount-ro", "/nix/store/57iz36553175g3178pvxj"..., "--symlink", "/nix/store/6shbmrgicf20w60kdxi2f"..., "/init", ...], 0x59be7e4d54c0 /* 72 vars */) = 0
+brk(NULL)                               = 0x556360e74000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b26cb56f000
+access("/etc/ld-nix.so.preload", R_OK)  = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/xzf15i29vcfinhyb2c7jg4x37lzmma0m-libcap-2.77-lib/lib/glibc-hwcaps/x86-64-v3/libselinux.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/nix/store/xzf15i29vcfinhyb2c7jg4x37lzmma0m-libcap-2.77-lib/lib/glibc-hwcaps/x86-64-v3/", 0x7ffc693e1f50, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/xzf15i29vcfinhyb2c7jg4x37lzmma0m-libcap-2.77-lib/lib/glibc-hwcaps/x86-64-v2/libselinux.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/nix/store/xzf15i29vcfinhyb2c7jg4x37lzmma0m-libcap-2.77-lib/lib/glibc-hwcaps/x86-64-v2/", 0x7ffc693e1f50, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/xzf15i29vcfinhyb2c7jg4x37lzmma0m-libcap-2.77-lib/lib/libselinux.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/nix/store/xzf15i29vcfinhyb2c7jg4x37lzmma0m-libcap-2.77-lib/lib/", {st_mode=S_IFDIR|0555, st_size=136, ...}, 0) = 0
+openat(AT_FDCWD, "/nix/store/6lfzc2r9ifczrfanhzw8knf3zg4f2mix-libselinux-3.10/lib/glibc-hwcaps/x86-64-v3/libselinux.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/nix/store/6lfzc2r9ifczrfanhzw8knf3zg4f2mix-libselinux-3.10/lib/glibc-hwcaps/x86-64-v3/", 0x7ffc693e1f50, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/6lfzc2r9ifczrfanhzw8knf3zg4f2mix-libselinux-3.10/lib/glibc-hwcaps/x86-64-v2/libselinux.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/nix/store/6lfzc2r9ifczrfanhzw8knf3zg4f2mix-libselinux-3.10/lib/glibc-hwcaps/x86-64-v2/", 0x7ffc693e1f50, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/6lfzc2r9ifczrfanhzw8knf3zg4f2mix-libselinux-3.10/lib/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0555, st_size=239648, ...}) = 0
+mmap(NULL, 218544, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b26cb539000
+mmap(0x7b26cb541000, 139264, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8000) = 0x7b26cb541000
+mmap(0x7b26cb563000, 32768, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2a000) = 0x7b26cb563000
+mmap(0x7b26cb56b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x31000) = 0x7b26cb56b000
+mmap(0x7b26cb56d000, 5552, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7b26cb56d000
+close(3)                                = 0
+openat(AT_FDCWD, "/nix/store/xzf15i29vcfinhyb2c7jg4x37lzmma0m-libcap-2.77-lib/lib/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\200\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0555, st_size=52704, ...}) = 0
+mmap(NULL, 49224, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b26cb52c000
+mmap(0x7b26cb52f000, 24576, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7b26cb52f000
+mmap(0x7b26cb535000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x7b26cb535000
+mmap(0x7b26cb537000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x7b26cb537000
+close(3)                                = 0
+openat(AT_FDCWD, "/nix/store/xzf15i29vcfinhyb2c7jg4x37lzmma0m-libcap-2.77-lib/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/6lfzc2r9ifczrfanhzw8knf3zg4f2mix-libselinux-3.10/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/glibc-hwcaps/x86-64-v3/", 0x7ffc693e1f10, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/glibc-hwcaps/x86-64-v2/", 0x7ffc693e1f10, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0@\264\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+fstat(3, {st_mode=S_IFREG|0555, st_size=2413096, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 840, 64) = 840
+mmap(NULL, 2141776, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b26cb200000
+mmap(0x7b26cb228000, 1576960, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7b26cb228000
+mmap(0x7b26cb3a9000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a9000) = 0x7b26cb3a9000
+mmap(0x7b26cb3f8000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f7000) = 0x7b26cb3f8000
+mmap(0x7b26cb3fe000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7b26cb3fe000
+close(3)                                = 0
+openat(AT_FDCWD, "/nix/store/9qf6m6csaabfx2adfdk5771w8fjsqccs-pcre2-10.46/lib/glibc-hwcaps/x86-64-v3/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/nix/store/9qf6m6csaabfx2adfdk5771w8fjsqccs-pcre2-10.46/lib/glibc-hwcaps/x86-64-v3/", 0x7ffc693e1ef0, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/9qf6m6csaabfx2adfdk5771w8fjsqccs-pcre2-10.46/lib/glibc-hwcaps/x86-64-v2/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/nix/store/9qf6m6csaabfx2adfdk5771w8fjsqccs-pcre2-10.46/lib/glibc-hwcaps/x86-64-v2/", 0x7ffc693e1ef0, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/9qf6m6csaabfx2adfdk5771w8fjsqccs-pcre2-10.46/lib/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0555, st_size=726392, ...}) = 0
+mmap(NULL, 709160, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b26cb47e000
+mmap(0x7b26cb481000, 516096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7b26cb481000
+mmap(0x7b26cb4ff000, 176128, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x81000) = 0x7b26cb4ff000
+mmap(0x7b26cb52a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xab000) = 0x7b26cb52a000
+close(3)                                = 0
+openat(AT_FDCWD, "/nix/store/9qf6m6csaabfx2adfdk5771w8fjsqccs-pcre2-10.46/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/nix/store/57iz36553175g3178pvxjij8z5rcsd4n-glibc-2.42-61/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0555, st_size=15688, ...}) = 0
+mmap(NULL, 16400, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7b26cb479000
+mmap(0x7b26cb47a000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7b26cb47a000
+mmap(0x7b26cb47b000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7b26cb47b000
+mmap(0x7b26cb47c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7b26cb47c000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b26cb477000
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b26cb474000
+arch_prctl(ARCH_SET_FS, 0x7b26cb474840) = 0
+set_tid_address(0x7b26cb474b10)         = 53513
+set_robust_list(0x7b26cb474b20, 24)     = 0
+rseq({cpu_id_start=0, cpu_id=RSEQ_CPU_ID_UNINITIALIZED, rseq_cs=NULL, flags=0, node_id=0, mm_cid=0, slice_ctrl={request=0, granted=0, __reserved=0}, __reserved=0}, 33, 0, 0x53053053) = 0
+mprotect(0x7b26cb3f8000, 16384, PROT_READ) = 0
+mprotect(0x7b26cb47c000, 4096, PROT_READ) = 0
+mprotect(0x7b26cb52a000, 4096, PROT_READ) = 0
+mprotect(0x7b26cb537000, 4096, PROT_READ) = 0
+mprotect(0x7b26cb56b000, 4096, PROT_READ) = 0
+mprotect(0x55632b1d6000, 4096, PROT_READ) = 0
+mprotect(0x7b26cb5b0000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+getrandom("\x80\x04\x28\xf8\x34\x0e\x97\x84", 8, GRND_NONBLOCK) = 8
+prctl(PR_CAPBSET_READ, CAP_MAC_OVERRIDE) = 1
+prctl(PR_CAPBSET_READ, 0x30 /* CAP_??? */) = -1 EINVAL (Invalid argument)
+prctl(PR_CAPBSET_READ, CAP_CHECKPOINT_RESTORE) = 1
+prctl(PR_CAPBSET_READ, 0x2c /* CAP_??? */) = -1 EINVAL (Invalid argument)
+prctl(PR_CAPBSET_READ, 0x2a /* CAP_??? */) = -1 EINVAL (Invalid argument)
+prctl(PR_CAPBSET_READ, 0x29 /* CAP_??? */) = -1 EINVAL (Invalid argument)
+statfs("/sys/fs/selinux", 0x7ffc693e2d10) = -1 ENOENT (No such file or directory)
+statfs("/selinux", 0x7ffc693e2d10)      = -1 ENOENT (No such file or directory)
+brk(NULL)                               = 0x556360e74000
+brk(0x556360e95000)                     = 0x556360e95000
+openat(AT_FDCWD, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+read(3, "nodev\tsysfs\nnodev\ttmpfs\nnodev\tbd"..., 1024) = 357
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+access("/etc/selinux/config", F_OK)     = -1 ENOENT (No such file or directory)
+rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7b26cb242790}, NULL, 8) = 0
+getuid()                                = 1000
+getgid()                                = 100
+geteuid()                               = 1000
+capget({version=_LINUX_CAPABILITY_VERSION_3, pid=0}, {effective=0, permitted=0, inheritable=1<<CAP_SETPCAP|1<<CAP_SYS_NICE}) = 0
+prctl(PR_SET_NO_NEW_PRIVS, 1, 0, 0, 0)  = 0
+openat(AT_FDCWD, "/proc/sys/kernel/overflowuid", O_RDONLY|O_CLOEXEC) = 3
+read(3, "65534\n", 4079)                = 6
+read(3, "", 4073)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/proc/sys/kernel/overflowgid", O_RDONLY|O_CLOEXEC) = 3
+read(3, "65534\n", 4079)                = 6
+read(3, "", 4073)                       = 0
+close(3)                                = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(1, TCGETS2, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|B38400<<IBSHIFT|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+readlink("/proc/self/fd/1", "/dev/pts/0", 4095) = 10
+newfstatat(AT_FDCWD, "/dev/pts/0", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, 0) = 0
+getuid()                                = 1000
+openat(AT_FDCWD, "/proc", O_RDONLY|O_PATH) = 3
+rt_sigprocmask(SIG_BLOCK, [CHLD], NULL, 8) = 0
+wait4(-1, 0x7ffc693e2a90, WNOHANG, NULL) = -1 ECHILD (No child processes)
+eventfd2(0, EFD_CLOEXEC)                = 4
+clone(child_stack=NULL, flags=CLONE_NEWNS|CLONE_NEWUSER|SIGCHLD) = 53521
+openat(3, "53521/ns", O_RDONLY|O_PATH)  = 5
+newfstatat(5, "mnt", {st_mode=S_IFREG|0444, st_size=0, ...}, 0) = 0
+close(5)                                = 0
+capset({version=_LINUX_CAPABILITY_VERSION_3, pid=0}, {effective=0, permitted=0, inheritable=0}) = 0
+prctl(PR_SET_DUMPABLE, SUID_DUMP_USER)  = 0
+prctl(PR_SET_PDEATHSIG, SIGKILL)        = 0
+write(4, "\1\0\0\0\0\0\0\0", 8)         = 8
+close(4)                                = 0
+openat(3, "self/fd", O_RDONLY|O_NOCTTY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+fstat(4, {st_mode=S_IFDIR|0500, st_size=5, ...}) = 0
+fcntl(4, F_GETFL)                       = 0x18800 (flags O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY)
+fcntl(4, F_SETFD, FD_CLOEXEC)           = 0
+getdents64(4, 0x556360e771e0 /* 7 entries */, 32768) = 168
+close(3)                                = 0
+getdents64(4, 0x556360e771e0 /* 0 entries */, 32768) = 0
+close(4)                                = 0
+signalfd4(-1, [CHLD], 8, SFD_CLOEXEC|SFD_NONBLOCK) = 3
+poll([{fd=3, events=POLLIN}], 1, -1)    = 1 ([{fd=3, revents=POLLIN}])
+read(3, "\21\0\0\0\0\0\0\0\1\0\0\0\21\321\0\0\350\3\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 128) = 128
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WNOHANG, NULL) = 53521
+exit_group(0)                           = ?
++++ exited with 0 +++
