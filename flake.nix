@@ -21,6 +21,11 @@
         lanzaboote.nixosModules.lanzaboote
         home-manager.nixosModules.home-manager
         {
+          nixpkgs.overlays = [
+            (final: prev: {
+              davinci-resolve = final.callPackage ./pkgs/davinci-resolve.nix {};
+            })
+          ];
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.abhi = import ./home;

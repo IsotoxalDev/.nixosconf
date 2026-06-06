@@ -45,7 +45,8 @@
 
   # Allow Unfree
   nixpkgs.config.allowUnfree = true;
-  
+
+
   # User
   users.users.abhi = {
     isNormalUser = true;

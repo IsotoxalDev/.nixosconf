@@ -77,6 +77,7 @@ in
     zathura
     libnotify
     papirus-icon-theme
+    motrix
 
     #Media Codecs
     ffmpeg
@@ -88,7 +89,7 @@ in
     gst_all_1.gst-libav
 
     #Editing
-    #davinci-resolve
+    davinci-resolve
 
     #Game
     protonup-qt
