@@ -13,6 +13,7 @@ in
     (import ./modules/helix.nix { inherit config pkgs lib colors; })
     (import ./modules/wofi.nix { inherit config pkgs lib colors; })
     (import ./modules/gaming.nix { inherit config pkgs lib colors; })
+    (import ./modules/emacs.nix { inherit config pkgs colors; })
   ];
   
   home.username = "abhi";
@@ -86,10 +87,17 @@ in
     gst_all_1.gst-plugins-ugly
     gst_all_1.gst-libav
 
+    #Editing
+    #davinci-resolve
+
     #Game
     protonup-qt
     mangohud
     heroic
+    bottles
+    lutris
+    prismlauncher
+    zenity
 
     #work
     hubstaff

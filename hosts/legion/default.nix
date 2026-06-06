@@ -53,6 +53,30 @@
     shell = pkgs.zsh;
   };
 
+  # Dynamic linking libraries
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc
+      zlib
+      fuse3
+      icu
+      nss
+      openssl
+      curl
+      expat
+
+
+      pkgsi686Linux.stdenv.cc.cc
+      pkgsi686Linux.zlib
+    ];
+  };
+
+  # 32-bit dynamic linker for Wine/Proton (nix-ld only creates the 64-bit stub)
+  systemd.tmpfiles.rules = [
+    "L+ /lib/ld-linux.so.2 - - - - ${pkgs.pkgsi686Linux.glibc}/lib/ld-linux.so.2"
+  ];
+
   # Enable zsh
   programs.zsh.enable = true;
 
@@ -97,6 +121,7 @@
     usbutils
     kitty
     sbctl
+    pkgsi686Linux.glibc
   ];
 
   environment.sessionVariables = {
