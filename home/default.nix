@@ -13,7 +13,6 @@ in
     (import ./modules/helix.nix { inherit config pkgs lib colors; })
     (import ./modules/wofi.nix { inherit config pkgs lib colors; })
     (import ./modules/gaming.nix { inherit config pkgs lib colors; })
-    (import ./modules/emacs.nix { inherit config pkgs colors; })
   ];
   
   home.username = "abhi";
