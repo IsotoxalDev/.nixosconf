@@ -77,6 +77,12 @@ in
     libnotify
     papirus-icon-theme
     motrix
+    logseq
+    godot
+
+    # AI Coding
+    opencode
+    claude-code
 
     #Media Codecs
     ffmpeg
@@ -101,5 +107,6 @@ in
 
     #work
     hubstaff
+    slack
   ];
 }

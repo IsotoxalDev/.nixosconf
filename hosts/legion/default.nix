@@ -27,6 +27,14 @@
   networking.hostName = "legion";
   networking.networkmanager.enable = true;
 
+  # Syncthing
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+    user = "abhi";
+    dataDir = "/home/abhi";
+  };
+
   # Timezone
   time.timeZone = "Asia/Kolkata";
 
@@ -45,6 +53,7 @@
 
   # Allow Unfree
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowInsecurePredicate = _: true;
 
 
   # User

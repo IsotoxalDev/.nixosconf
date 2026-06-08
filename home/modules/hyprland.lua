@@ -256,6 +256,14 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name  = "float-rachana",
+    match = { class = "^(rachana)$" },
+    float = true,
+    size  = { 1280, 800 },
+    center = true,
+})
+
+hl.window_rule({
     name  = "float-pavucontrol",
     match = { class = "^(pavucontrol)$" },
     float = true,
