@@ -79,6 +79,7 @@ in
     motrix
     logseq
     godot
+    mpv
 
     # AI Coding
     opencode
