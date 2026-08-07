@@ -18,18 +18,24 @@ hl.monitor({
 
 local terminal    = "kitty --single-instance"
 local fileManager = "kitty -e yazi"
-local menu        = "wofi --show drun"
+local menu        = "rofi -show drun"
 
 --------------------
 ---- AUTOSTART ----
 --------------------
 
 hl.on("hyprland.start", function()
+    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE")
+    hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE")
     hl.exec_cmd("waybar")
     hl.exec_cmd("awww-daemon")
     hl.exec_cmd(os.getenv("HOME") .. "/.config/scripts/wallpaper-rotate.sh")
     hl.exec_cmd(os.getenv("HOME") .. "/.config/scripts/battery-monitor.sh")
-    hl.exec_cmd("swayidle -w timeout 180 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' timeout 600 'systemctl suspend' before-sleep 'swaylock -f -c 000000'")
+    hl.exec_cmd("swayidle -w"
+        .. " timeout 180 '" .. isFullscreen .. " || hyprctl dispatch dpms off'"
+        .. " resume 'hyprctl dispatch dpms on'"
+        .. " timeout 600 '" .. isFullscreen .. " || systemctl suspend'"
+        .. " before-sleep 'swaylock -f -c 000000'")
 end)
 
 --------------------
@@ -111,6 +117,9 @@ hl.config({
     xwayland = {
         force_zero_scaling = true,
     },
+    render = {
+        icc_vcgt_enabled = false,
+    },
 })
 
 --------------------
@@ -188,6 +197,9 @@ hl.bind(mod .. " + F1", hl.dsp.exec_cmd("powerprofilesctl set power-saver && not
 hl.bind(mod .. " + F2", hl.dsp.exec_cmd("powerprofilesctl set balanced && notify-send 'Power Mode' 'Balanced ⚖'"))
 hl.bind(mod .. " + F3", hl.dsp.exec_cmd("powerprofilesctl set performance && notify-send 'Power Mode' 'Performance 🔥'"))
 
+-- Color profile cycle
+hl.bind(mod .. " + F4", hl.dsp.exec_cmd("$HOME/.local/bin/switch-color-profile"))
+
 -- Workspaces
 for i = 1, 9 do
     hl.bind(mod .. " + " .. i,             hl.dsp.focus({ workspace = i }))
@@ -211,8 +223,8 @@ hl.bind("XF86AudioRaiseVolume",  hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT
 hl.bind("XF86AudioLowerVolume",  hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),      { locked = true, repeating = true })
 hl.bind("XF86AudioMute",         hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),     { locked = true })
 hl.bind("XF86AudioMicMute",      hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true })
-hl.bind("XF86MonBrightnessUp",   hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp",   hl.dsp.exec_cmd("brightnessctl -d intel_backlight -e4 -n2 set 5%+"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -d intel_backlight -e4 -n2 set 5%-"), { locked = true, repeating = true })
 hl.bind("XF86AudioNext",         hl.dsp.exec_cmd("playerctl next"),                                  { locked = true })
 hl.bind("XF86AudioPlay",         hl.dsp.exec_cmd("playerctl play-pause"),                            { locked = true })
 hl.bind("XF86AudioPrev",         hl.dsp.exec_cmd("playerctl previous"),                              { locked = true })
@@ -233,9 +245,10 @@ hl.bind(mod .. " + SHIFT + Print", hl.dsp.exec_cmd("grim -t ppm - | " .. satty))
 ---- LAYER RULES ----
 --------------------
 
+
 hl.layer_rule({
-    name  = "wofi-blur",
-    match = { namespace = "^(wofi)$" },
+    name  = "rofi-blur",
+    match = { namespace = "^(rofi)$" },
     blur  = true,
 })
 
@@ -300,3 +313,4 @@ hl.window_rule({
     },
     no_focus = true,
 })
+

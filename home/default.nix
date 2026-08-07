@@ -11,8 +11,9 @@ in
     (import ./modules/waybar.nix { inherit config pkgs lib colors; })
     (import ./modules/dunst.nix { inherit config pkgs lib colors; })
     (import ./modules/helix.nix { inherit config pkgs lib colors; })
-    (import ./modules/wofi.nix { inherit config pkgs lib colors; })
+    (import ./modules/rofi.nix { inherit config pkgs colors; })
     (import ./modules/gaming.nix { inherit config pkgs lib colors; })
+    ./modules/color-profiles.nix
   ];
   
   home.username = "abhi";
@@ -72,14 +73,40 @@ in
     executable = true;
   };
 
+  programs.chromium = {
+    enable = true;
+    commandLineArgs = [
+      "--ozone-platform=wayland"
+      "--enable-features=WebRtcPipeWireCapturer"
+    ];
+  };
+
+  programs.git = {
+    enable = true;
+    settings = {
+      user = {
+        name  = "Abhinav Kuruvila Joseph";
+        email = "62714538+IsotoxalDev@users.noreply.github.com";
+      };
+    };
+  };
+
   home.packages = with pkgs; [
-    zathura
+    (pkgs.zathuraPkgs.zathuraWrapper.override {
+      plugins = with pkgs.zathuraPkgs; [ zathura_pdf_mupdf ];
+    })
     libnotify
     papirus-icon-theme
     motrix
     logseq
     godot
     mpv
+    blender
+    inkscape
+    discord
+    telegram-desktop
+    calibre
+    anki
 
     # AI Coding
     opencode
@@ -96,8 +123,29 @@ in
 
     #Editing
     davinci-resolve
+    darktable
+    (pkgs.wrapOBS {
+      plugins = with pkgs.obs-studio-plugins; [
+        obs-pipewire-audio-capture
+        wlrobs
+      ];
+    })
+    kdePackages.kdenlive
+    ardour
+    audacity
 
     #Game
+    (pkgs.symlinkJoin {
+      name = "mesen";
+      paths = [ pkgs.mesen ];
+      buildInputs = [ pkgs.makeWrapper ];
+      postBuild = ''
+        wrapProgram $out/bin/Mesen \
+          --set GDK_BACKEND x11 \
+          --set SDL_VIDEODRIVER x11 \
+          --set DOTNET_EnableWriteXorExecute 0
+      '';
+    })
     protonup-qt
     mangohud
     heroic
@@ -109,5 +157,13 @@ in
     #work
     hubstaff
     slack
+    onlyoffice-desktopeditors
+
+    # Archives
+    unzip
+    unrar
+
+    # Bluetooth
+    blueman
   ];
 }

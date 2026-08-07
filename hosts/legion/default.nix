@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -8,6 +8,7 @@
     ../../modules/audio.nix
     ../../modules/battery.nix
     ../../modules/legion.nix
+    ../../modules/gamepad.nix
   ];
 
   # Bootloader
@@ -26,6 +27,7 @@
   # Networking
   networking.hostName = "legion";
   networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [ 4455 3000 ]; # OBS WebSocket (IRL Pro), 3000 (dev server)
 
   # Syncthing
   services.syncthing = {
@@ -59,7 +61,7 @@
   # User
   users.users.abhi = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "video" "audio" ];
+    extraGroups = [ "wheel" "networkmanager" "video" "audio" "input" "dialout" ];
     shell = pkgs.zsh;
   };
 
@@ -96,6 +98,7 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
+    extraPackages = with pkgs; [ gamemode ];
   };
 
   hardware.graphics = {
@@ -121,6 +124,12 @@
     package = pkgs.ollama-cuda;
   };
 
+  # MySQL
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
+
   # Basic packages
   environment.systemPackages = with pkgs; [
     git
@@ -138,6 +147,7 @@
     MOZ_ENABLE_WAYLAND = "1";
     MOZ_USE_XINPUT2 = "1";
     STEAM_FORCE_DESKTOPUI_SCALING = "1.6";
+    NIXOS_OZONE_WL = "1";
   };
 
   # Nix settings
@@ -150,6 +160,17 @@
     noto-fonts-color-emoji
     nerd-fonts.jetbrains-mono
   ];
+
+  # FPGA udev rules (Quartus/ModelSim)
+  services.udev.packages = [ inputs.nix-fpga.packages.x86_64-linux.quartus-udev-rules ];
+
+  # Removable drives
+  services.udisks2.enable = true;
+
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
 
   # Firmware
   hardware.enableRedistributableFirmware = true;

@@ -107,6 +107,22 @@
         frame_color = "#${colors.red}";
         timeout = 0;
       };
+
+      z_gamepad = {
+        appname = "gamepad";
+        background = "#${colors.base03}";
+        foreground = "#${colors.green}";
+        frame_color = "#${colors.sky}";
+        timeout = 4;
+      };
+
+      z_gamepad_battery = {
+        appname = "gamepad-battery";
+        background = "#${colors.base03}";
+        foreground = "#${colors.amber}";
+        frame_color = "#${colors.amber}";
+        timeout = 0;
+      };
     };
   };
 }

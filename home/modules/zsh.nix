@@ -22,6 +22,7 @@
 
     initContent = ''
       eval "$(zoxide init zsh)"
+      export PATH="$HOME/.local/bin:$PATH"
     '';
   };
 
@@ -85,9 +86,30 @@
     enableZshIntegration = true;
   };
 
+  services.udiskie = {
+    enable = true;
+    automount = true;
+    notify = true;
+    tray = "never";
+  };
+
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
+    keymap = {
+      manager.prepend_keymap = [
+        {
+          on = [ "m" ];
+          run = "shell 'udisksctl mount -b \"$1\"' --confirm";
+          desc = "Mount selected drive";
+        }
+        {
+          on = [ "M" ];
+          run = "shell 'udisksctl unmount -b \"$1\"' --confirm";
+          desc = "Unmount selected drive";
+        }
+      ];
+    };
   };
 
   home.packages = with pkgs; [

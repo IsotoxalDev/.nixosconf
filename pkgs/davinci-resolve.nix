@@ -55,7 +55,7 @@ let
   davinci = (
     stdenv.mkDerivation rec {
       pname = "davinci-resolve${lib.optionalString studioVariant "-studio"}";
-      version = "21.0";
+      version = "21.0.2";
 
       nativeBuildInputs = [
         appimageTools.appimage-exec
@@ -70,9 +70,9 @@ let
       ];
 
       src = requireFile {
-        name = "DaVinci_Resolve_21.0_Linux.zip";
+        name = "DaVinci_Resolve_21.0.2_Linux.zip";
         url = "https://www.blackmagicdesign.com/products/davinciresolve";
-        sha256 = "f8d22b460a0a39a198af317066c6453fc72c8693d73b9640db2e8320a6148b62";
+        sha256 = "a0a0ac52ae0d87ca08bfef0e1c9f288a53719d163db003579f7e33fbf6e7731d";
       };
 
       sourceRoot = ".";
@@ -273,6 +273,10 @@ buildFHSEnv {
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/lib32:${davinci}/libs
     export QT_QPA_PLATFORM=xcb
     export QT_SCALE_FACTOR=1.5
+    export __NV_PRIME_RENDER_OFFLOAD=1
+    export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
+    export __GLX_VENDOR_LIBRARY_NAME=nvidia
+    export __VK_LAYER_NV_optimus=NVIDIA_only
     if [ $# -gt 0 ]; then
       exec "$@"
     else

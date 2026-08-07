@@ -11,11 +11,13 @@
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-fpga.url = "git+https://codeberg.org/Rutherther/nix-fpga";
   };
 
   outputs = { self, nixpkgs, home-manager, lanzaboote, ... }@inputs: {
     nixosConfigurations.legion = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
       modules = [
         ./hosts/legion
         lanzaboote.nixosModules.lanzaboote

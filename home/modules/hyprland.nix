@@ -1,12 +1,18 @@
 { config, pkgs, colors, ... }:
 
+let
+  isFullscreen = pkgs.writeShellScript "is-fullscreen" ''
+    hyprctl clients -j | grep -q '"fullscreen": [1-9]'
+  '';
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
     extraConfig = ''
-      -- colors injected by nix
+      -- injected by nix
+      local isFullscreen = "${isFullscreen}"
       local c = {
         base      = "rgba(${colors.base01}ff)",
         surface   = "rgba(${colors.base02}ff)",
